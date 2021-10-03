@@ -1,0 +1,72 @@
+@import "fonts";
+@import "reset";
+
+@import "btn";
+@import "date";
+@import "form";
+@import "timer";
+
+@import "header";
+@import "who";
+@import "description";
+@import "about";
+@import "footer";
+
+.know {
+    background-image: url(../img/know_bg.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &__wrapper {
+        padding: 100px 0;
+    }
+
+    &__items {
+        margin-top: 100px;
+        margin-bottom: 145px;
+        position: relative;
+    }
+
+    &__item {
+        position: absolute;
+        background: #664cf3;
+        border: 3px solid #664cf3;
+        box-shadow: 0px 14px 44px rgba(0, 0, 0, 0.07);
+        border-radius: 10px;
+        padding: 25px;
+        color: #fff;
+        &:nth-child(2) {
+            max-width: 320px;
+            top: 0;
+            left: 0;
+        }
+        &:nth-child(3) {
+            max-width: 200px;
+            top: 70px;
+            right: 80px;
+        }
+        &:nth-child(4) {
+            max-width: 256px;
+            bottom: -31px;
+            left: 190px;
+        }
+        &:nth-child(5) {
+            max-width: 456px;
+            bottom: -116px;
+            right: 40px;
+        }
+    }
+
+    &__decor {
+        max-width: 822px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .title {
+        text-align: center;
+    }
+}
+.container {
+}

@@ -1,0 +1,79 @@
+.date {
+  position: relative;
+  padding: 10px 40px 25px;
+  border-radius: 10px;
+}
+
+.date p,
+.date span {
+  position: relative;
+  z-index: 2;
+}
+
+.date::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 10px;
+}
+
+.date__day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.date__day p {
+  font-size: 120px;
+  font-family: "GoshaSansBold";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 15px;
+  line-height: 100%;
+}
+
+.date__day span {
+  font-size: 20px;
+  position: absolute;
+  font-family: "GoshaSansBold";
+  top: 50%;
+  right: 0;
+  -webkit-transform: rotate(-90deg) translateY(30px) translateX(5px);
+          transform: rotate(-90deg) translateY(30px) translateX(5px);
+}
+
+.date__time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.date__time p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 22px;
+  margin-right: 5px;
+}
+
+.date__time span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+}
+/*# sourceMappingURL=date.css.map */

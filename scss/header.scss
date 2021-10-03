@@ -1,0 +1,191 @@
+.header {
+    background-color: #112250;
+    color: #fff;
+    background-image: url(../img/header_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+
+    &__wrapper {
+        padding: 50px 0;
+    }
+
+    &__info {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__info-about {
+        max-width: 570px;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    &__info-about-logo-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__info-about-logo {
+        max-width: 72px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    &__info-about-link {
+        font-size: 16px;
+        color: #fa5634;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        span {
+            font-size: 24px;
+            margin-right: 13px;
+        }
+    }
+
+    &__info-about-title {
+        font-family: "GoshaSansBold";
+        font-size: calc(36px + (48 - 36) * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(40px + (58 - 40) * ((100vw - 320px) / (1920 - 320)));
+        margin-bottom: 30px;
+    }
+
+    &__info-about-text {
+        font-size: calc(20px + (22 - 20) * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(22px + (32 - 22) * ((100vw - 320px) / (1920 - 320)));
+        font-family: "CirceRegular";
+    }
+
+    &__video {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 35px;
+    }
+
+    &__video-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__video-text {
+        font-size: 18px;
+        text-align: right;
+        text-decoration-line: underline;
+        color: #fa5634;
+        margin-right: 13px;
+    }
+
+    &__video-btn {
+        width: 130px;
+        height: 130px;
+        max-width: 100%;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            display: flex;
+            position: relative;
+            z-index: 2;
+            font-size: 40px;
+            transform: translateX(5px);
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px);
+        }
+    }
+
+    &__registration {
+        background: #fa5634;
+        border-radius: 10px;
+        padding: 37px 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 35px;
+        align-items: center;
+    }
+
+    &__registration-text {
+        font-family: "CirceRegular";
+        span {
+            font-family: "CirceExtraBold";
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .header {
+        &__info-about-title {
+            font-size: 48px;
+            line-height: 58px;
+        }
+        &__info-about-text {
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+}
+
+
+
+@media (max-width: 950px) {
+    .header {
+        &__registration {
+            padding: 20px;
+            grid-template-columns: repeat(1, 1fr);
+            max-width: 600px;
+            margin: 0 auto;
+            .btn {
+                justify-self: center;
+            }
+        }
+        &__registration-text {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        &__info-about-logo-wrapper {
+            margin-bottom: 15px;
+        }
+        .date {
+            padding: 10px 20px 15px;
+            &__day {
+                p {
+                    font-size: 80px;
+                    margin-right: 0;
+                }
+                span {
+                    font-size: 16px;
+                    transform: rotate(-90deg) translateY(20px) translateX(5px);
+                }
+            }
+            &__time {
+                p {
+                    font-size: 18px;
+                }
+                span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,97 @@
+html,
+body,
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "GoshaSansRegular";
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.title {
+    font-size: calc(28px + (50 - 28) * ((100vw - 320px) / (1920 - 320)));
+}
+@media (min-width: 1920px) {
+    .title {
+        font-size: 50px;
+    }
+}
+
+/* Точки (булиты) */
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slick-dots li {
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 7.5px;
+    border: 1px solid #e8e5fb;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        background-color: #fa5634;
+        display: none;
+    }
+}
+/* Активная точка */
+.slick-dots li.slick-active {
+    &::before {
+        display: block;
+    }
+}
+/* Элемент точки */
+.slick-dots li button {
+    display: none;
+}
+
+.fancybox__slide {
+    padding: 64px 10px;
+}
