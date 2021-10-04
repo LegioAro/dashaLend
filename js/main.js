@@ -37,6 +37,18 @@ $(document).ready(function () {
         }
     }
 
+    function sliderKnow() {
+        if ($(window).width() < 650) {
+            $('.know__items').not('.slick-initialized').slick({
+                slidesToShow: 1,
+                arrows: false,
+                dots: true,
+            })
+        } else {
+            $('.know__items').filter('.slick-initialized').slick('unslick');
+        }
+    }
+
 
 
     //перенос блоков
@@ -46,23 +58,31 @@ $(document).ready(function () {
         } else {
             $('.header__info').append($('.header .date'));
         }
+
+        if ($(window).width() < 651) {
+            $('.know__wrapper').append($('.know__decor'));
+        } else {
+            $('.know__items').prepend($('.know__decor'));
+        }
     }
 
     $(window).resize(function () {
+        moveDate();
         sliderWho();
         sliderDescription();
         sliderAbout();
-        moveDate();
+        sliderKnow();
         btnPopp();
 
     })
 
 
 
+    moveDate();
     sliderWho();
     sliderDescription();
     sliderAbout();
-    moveDate();
+    sliderKnow();
     btnPopp();
 
 

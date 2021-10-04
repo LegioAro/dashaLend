@@ -1,0 +1,174 @@
+.know {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url(../img/know_decor_bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+    }
+    &__wrapper {
+        padding-top: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
+        padding-bottom: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
+        position: relative;
+        z-index: 2;
+        &::before {
+            position: absolute;
+            content: "";
+            background-image: url(../img/know_bg.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            top: 50%;
+            left: 50%;
+            width: 744px;
+            height: 744px;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
+
+    &__items {
+        margin-top: 100px;
+        margin-bottom: 145px;
+        position: relative;
+    }
+
+    &__item {
+        position: absolute;
+        background: #664cf3;
+        border: 3px solid #664cf3;
+        box-shadow: 0px 14px 44px rgba(0, 0, 0, 0.07);
+        border-radius: 10px;
+        padding: 25px;
+        color: #fff;
+        &:nth-child(2) {
+            max-width: 320px;
+            top: 0;
+            left: 0;
+        }
+        &:nth-child(3) {
+            max-width: 200px;
+            top: 70px;
+            right: 80px;
+        }
+        &:nth-child(4) {
+            max-width: 256px;
+            bottom: -31px;
+            left: 190px;
+        }
+        &:nth-child(5) {
+            max-width: 456px;
+            bottom: -116px;
+            right: 40px;
+        }
+    }
+
+    &__decor {
+        max-width: 822px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .title {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1920px) {
+    .know {
+        &__wrapper {
+            padding: 50px 0;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .know {
+        &__item {
+            &:nth-child(3) {
+                right: 0px;
+                top: 50px;
+            }
+            &:nth-child(5) {
+                max-width: 256px;
+                right: 0px;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .know {
+        &__wrapper {
+            &::before {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__item {
+            &:nth-child(4) {
+                max-width: 256px;
+                bottom: -31px;
+                left: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .know {
+        &__decor {
+            width: 0;
+            display: none !important;
+        }
+        &__items {
+            margin-bottom: 0;
+            margin-top: 50px;
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto 0;
+            display: flex;
+            min-width: 0;
+            position: relative;
+        }
+        &__item {
+            position: static;
+            margin: 0 10px;
+            width: 100%;
+            max-width: 600px !important;
+            box-shadow: none;
+            min-height: 130px;
+            &:nth-child(2) {
+                max-width: 600px !important;
+                width: 100%;
+                top: auto;
+                left: auto;
+            }
+            &:nth-child(3) {
+                max-width: 600px !important;
+                width: 100%;
+                top: auto;
+                right: auto;
+            }
+            &:nth-child(4) {
+                max-width: 600px !important;
+                width: 100%;
+                bottom: auto;
+                left: auto;
+            }
+            &:nth-child(5) {
+                max-width: 600px !important;
+                width: 100%;
+                bottom: auto;
+                right: auto;
+            }
+        }
+        .slick-list {
+            overflow: hidden;
+        }
+    }
+}

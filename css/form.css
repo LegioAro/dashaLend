@@ -6,6 +6,7 @@
   border-radius: 10px;
   text-align: center;
   color: #000;
+  min-height: 628px;
 }
 
 .form__title {
@@ -161,4 +162,3 @@
     font-size: 35px;
   }
 }
-/*# sourceMappingURL=form.css.map */
