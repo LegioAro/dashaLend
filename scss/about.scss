@@ -8,7 +8,7 @@
 
     &__wrapper {
         padding-top: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
-        padding-bottom: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
+        padding-bottom: 100px;
         display: flex;
     }
 
